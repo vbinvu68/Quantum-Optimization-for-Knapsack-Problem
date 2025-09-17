@@ -34,7 +34,7 @@ pip install pylatexenc
 ### The main objective function without inequality constraint
 The initial objective function is:
 
-$$\min_{x,s}f(x)+p(\lambda,x,s)=\min_{x,s}\left(-\sum_i v_i x_i\right)$$
+$$\min_{x,s}f(x)=\min_{x,s}\left(-\sum_i v_i x_i\right)$$
 
 ### Encoding inequality constraint with slack variables
 Using slack variables to map inequality constraint, the objective function becomes [2-4]:
