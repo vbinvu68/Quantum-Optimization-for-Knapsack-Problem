@@ -20,6 +20,14 @@ Inspired by [4].
 ## Installation
 This notebook requires installing **`openqaoa`**, which includes a pre-implemented Knapsack model and supports unbalanced penalization.  
 
+```python
+conda create -n openqaoa-env python=3.10
+conda activate openqaoa-env
+conda install numpy sympy
+pip install qiskit qiskit-aer openqaoa
+pip install pylatexenc
+```
+
 ⚠️ Note: As of September 2025, `openqaoa` is **not compatible** with Python versions above 3.10.
 
 ## Objective function
@@ -36,6 +44,7 @@ $\lambda$ is set to 2 which is enough large for the constraint to always be fulf
 ### Encoding inequality constraint with unbalanced penalization
 Using unbalanced penalization to map inequality constraint, the objective function now is [2-4]:
 $$\min_{x,s}f(x)+p(\lambda,x,s)=\min_{x,s}\left[-\sum_i v_i x_i -\lambda_1(\sum_iw_ix_i-W)^2+\lambda_2(\sum_iw_ix_i-W)^2\right]$$
+
 where $\lambda_{i}$ ($i=1$ or $2$) are again penalty coefficients, which are proved to have good results for slack problem for Knack sack problem with $\lambda_1=0.9603$ and $\lambda_1=0.0371$ in [2]. 
 
  
@@ -72,4 +81,13 @@ where $\lambda_{i}$ ($i=1$ or $2$) are again penalty coefficients, which are pro
 - Random guess → ~0.95 optimal solutions  
 - Actual result: **21 optimal solutions / 1M shots**  
 - More shots → better results
+
+## References
+[1] Farhi, E., Goldstone, J., & Gutmann, S. (2014). A Quantum Approximate Optimization Algorithm. http://arxiv.org/abs/1411.4028
+
+[2] Montanez-Barrera, A., Willsch, D., A., Maldonado-Romo, & Michielsen, K. (2022). Unbalanced penalization: A new approach to encode inequality constraints of combinatorial problems for quantum optimization algorithms. http://arxiv.org/abs/2211.13914
+
+[3] Montanez-Barrera, J. A., Heuvel, P. van den, Willsch, D., & Michielsen, K. (2023). Improving Performance in Combinatorial Optimization Problems with Inequality Constraints: An Evaluation of the Unbalanced Penalization Method on D-Wave Advantage. https://doi.org/10.1109/QCE57702.2023.00067
+
+[4] A. Montanez, "Quadratic Unconstrained Binary Optimization tutorial," Pennylane.ai, Feb. 28, 2024. [Online]. Available: https://pennylane.ai/qml/demos/tutorial_QUBO. [Accessed: Sep. 14, 2025].
 
