@@ -67,7 +67,7 @@ where $\lambda_{i}$ ($i=1$ or $2$) are again penalty coefficients, which are pro
 ## Full 20-project set
 <img width="570" height="432" alt="20_project" src="https://github.com/user-attachments/assets/eb62de59-8533-4512-a395-c0db8d0b9076" />
 
-- Search space: \(2^{20} = 1,048,576\) configs  
+- Search space: $2^{20} = 1,048,576$ configs  
 - Need ~1M shots for coverage  
 - Random guess → ~0.95 optimal solutions  
 - Actual result: **21 optimal solutions / 1M shots**  
