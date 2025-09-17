@@ -39,7 +39,7 @@ $$\min_{x,s}f(x)+p(\lambda,x,s)=\min_{x,s}\left(-\sum_i v_i x_i\right)$$
 Using slack variables to map inequality constraint, the objective function becomes [2-4]:
 $$\min_{x,s}f(x)+p(\lambda,x,s)=\min_{x,s}\left[-\sum_i v_i x_i +\lambda(\sum_iw_ix_i-W)^2\right]$$
 
-$\lambda$ is set to 2 which is enough large for the constraint to always be fulfilled [4]
+where $\lambda$ is set to 2 which is enough large for the constraint to always be fulfilled [4]
 
 ### Encoding inequality constraint with unbalanced penalization
 Using unbalanced penalization to map inequality constraint, the objective function now is [2-4]:
