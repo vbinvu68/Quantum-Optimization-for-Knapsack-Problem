@@ -41,10 +41,10 @@ where $\lambda_{i}$ ($i=1$ or $2$) are again penalty coefficients, which are pro
  
 ## Solving with Quantum Approximate Optimization Algorithm (QAOA)
 1. **Init:** Apply Hadamards → equal superposition.  
-2. **Problem unitary:** \(U_C(\gamma) = e^{-i\gamma H_C}\) encodes cost (QUBO).  
-3. **Mixer unitary:** \(U_B(\beta) = e^{-i\beta H_B}, \; H_B=\sum X_j\).  
-4. **p layers:** Alternate \(U_C, U_B\) → final state \(|\psi_p(\gamma,\beta)\rangle\).  
-5. **Measure & optimize:** Estimate \(\langle \psi_p | H_C | \psi_p \rangle\), tune \(\gamma,\beta\).  
+2. **Problem unitary:** $U_C(\gamma) = e^{-i\gamma H_C}$ encodes cost (QUBO).  
+3. **Mixer unitary:** $U_B(\beta) = e^{-i\beta H_B}; H_B=\sum X_j$.  
+4. **p layers:** Alternate $U_C, U_B$ → final state $|\psi_p(\gamma,\beta)\rangle$.  
+5. **Measure & optimize:** Estimate $\langle \psi_p | H_C | \psi_p \rangle$, tune $\gamma,\beta$.  
 6. **Result:** Approximate solution to the optimization problem.
 
 ## Results
@@ -66,6 +66,7 @@ where $\lambda_{i}$ ($i=1$ or $2$) are again penalty coefficients, which are pro
 
 ## Full 20-project set
 <img width="570" height="432" alt="20_project" src="https://github.com/user-attachments/assets/eb62de59-8533-4512-a395-c0db8d0b9076" />
+
 - Search space: \(2^{20} = 1,048,576\) configs  
 - Need ~1M shots for coverage  
 - Random guess → ~0.95 optimal solutions  
