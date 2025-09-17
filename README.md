@@ -33,16 +33,19 @@ pip install pylatexenc
 ## Objective function
 ### The main objective function without inequality constraint
 The initial objective function is:
+
 $$\min_{x,s}f(x)+p(\lambda,x,s)=\min_{x,s}\left(-\sum_i v_i x_i\right)$$
 
 ### Encoding inequality constraint with slack variables
 Using slack variables to map inequality constraint, the objective function becomes [2-4]:
+
 $$\min_{x,s}f(x)+p(\lambda,x,s)=\min_{x,s}\left[-\sum_i v_i x_i +\lambda(\sum_iw_ix_i-W)^2\right]$$
 
 where $\lambda$ is set to 2 which is enough large for the constraint to always be fulfilled [4]
 
 ### Encoding inequality constraint with unbalanced penalization
 Using unbalanced penalization to map inequality constraint, the objective function now is [2-4]:
+
 $$\min_{x,s}f(x)+p(\lambda,x,s)=\min_{x,s}\left[-\sum_i v_i x_i -\lambda_1(\sum_iw_ix_i-W)^2+\lambda_2(\sum_iw_ix_i-W)^2\right]$$
 
 where $\lambda_{i}$ ($i=1$ or $2$) are again penalty coefficients, which are proved to have good results for slack problem for Knack sack problem with $\lambda_1=0.9603$ and $\lambda_1=0.0371$ in [2]. 
